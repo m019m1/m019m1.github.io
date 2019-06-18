@@ -21,8 +21,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  margin: auto;
   max-width: 1000px;
+  margin: auto;
 }
 
 nav > a {
@@ -48,12 +48,6 @@ nav ul {
       flex-wrap: wrap;
   width: calc(100vw - 221px);
   max-width: 500px;
-}
-
-@media screen and (max-width: 1000px) {
-  nav {
-    margin-left: 0px;
-  }
 }
 
 nav li {
@@ -101,6 +95,9 @@ header {
 .center, .center2 {
   width: 1000px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main {
@@ -110,12 +107,10 @@ main {
 
 section {
   background: white;
-  width: 630px;
   padding: 30px 0px;
   border-radius: 5px;
-  float: left;
   /* border: 1px solid black; */
-  /* margin: 30px auto; */
+  margin: 0px 20px;
 }
 
 .main_div {
@@ -187,7 +182,7 @@ aside {
   /* border: 1px solid black; */
   width: 300px;
   /* padding: 30px 0px; */
-  margin-left: 670px;
+  margin-right: 50px;
   /* background: url("images/sidebar-bg-02.png"); */
 }
 
@@ -207,7 +202,7 @@ aside {
   background: url("images/sidebar-bg-03.png");
 }
 
-.aside_p {
+.aside_p, .footer_p {
   line-height: 2;
   padding: 20px 30px;
   color: #ddbbbb;
@@ -239,29 +234,31 @@ aside p:last-of-type {
 
 footer {
   /* height: 283px; */
-  background: url("images/footer-content-bg-02.png");
+  background: url("images/footer-content-bg-02.png") repeat-x;
+}
+
+.center2 {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .footer_div {
   border: 1px solid #331111;
-  margin: 40px 30px 20px 0px;
+  margin: 20px 15px 10px 15px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 3px 3px #442222;
           box-shadow: 0px 0px 3px 3px #442222;
 }
 
-.center2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 footer h2 {
   color: white;
-  padding: 20px 30px 0px;
+  padding: 10px 10px 0px;
+}
+
+.footer_p {
+  padding: 5px 10px;
+  text-align: justify;
 }
 
 #footer2 {
@@ -276,12 +273,31 @@ footer h2 {
   color: #784F45;
 }
 
-@media screen and (min-width: 600px) and (max-width: 760px) {
-  .center2 {
+@media screen and (max-width: 768px) {
+  nav {
+    margin-left: 0px;
+  }
+  .center, .center2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  section {
+    width: 630px;
+    margin: auto;
+  }
+  aside {
+    margin: auto;
+  }
+  nav li a {
+    font: 22px 'Arvo';
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    margin-left: 0px;
   }
 }
 /*# sourceMappingURL=styles23S.css.map */
