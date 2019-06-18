@@ -2,10 +2,7 @@ body {
     font: 13px "Trebuchet MS";
     min-width: 1000px;
 }
-* {
-	margin: 0;
-	padding: 0;
-}
+
 // $mw: 1000px;
 // @mixin mw ($mw) { 
 //     min-width: $mw;
@@ -19,7 +16,7 @@ body {
 }
 nav {
 	display: flex;
-    width: 100vw;
+    width: 100%;
     max-width: 1000px;
     margin: auto;
 	// border: 1px solid black;
@@ -33,48 +30,36 @@ nav > a {
 	height: 110px;
 	background: url("images/logo-bg.png");
 	text-align: center;
-	font-size: 60px;
+	font-size: 50px;
 	line-height: 110px;
 }
 nav ul {
 	display: flex;	
     margin: auto;
 	list-style-type: none;
-	flex-wrap: wrap;
 	// border: 1px solid blue;
-	width: calc(100vw - 221px);
-	max-width: 500px;
+	// width: calc(100% - 221px);
 }
-	// @media screen and (max-width: 1000px) {
-	// 	nav {
-	// 		margin-left: 0px;
-	// 	}
-	// }
 nav li {
-	margin: auto;
+	margin: auto 30px;
 	// border: 1px solid darkgreen;
-	// flex: 1;
 }
 
 nav li a {
 	display: block;
 	letter-spacing: -1px;
-	font: 16px 'Arvo';
+	font: 24px 'Arvo';
 	color: white;
 	text-decoration:none;
 	/* border: 1px solid yellow; */
 }
 #active {
 	padding: 5px 15px;
-	/* width:  */
 	border-radius: 5px;
 	background-color: #881111;
 	box-shadow: 0px 0px 10px rgba(255,255,255, 0.3);
 }
 header {
-    // @include mw($mw);
-	/* display: flex; */
-	/* height: 340px; */
 	background: url("images/banner-wrapper-bg.png");
 	padding: 32px 0px;
 }
@@ -137,16 +122,20 @@ h1 {
 }
 #main_a {
 	display: block;
-	width: 570px;
+	// width: 100%;
 	height: 196px;
 	background: url("images/pics01.jpg");
+	background-size: cover;
 	border-radius: 5px;
 	margin: 25px 0px;
+	cursor: pointer;
+	// border: 1px solid black;
 }
 #posted_div {
 	display: flex;
 	justify-content: space-between;
 	/* border: 1px solid black; */
+	width: 570px;
 	padding: 0px 20px; 
 	font: 16px "Arvo";
 	line-height: 67px;
@@ -175,8 +164,8 @@ aside {
 	height: 15px;
 	background: url("images/sidebar-bg-01.png");
 }
-#aside_center {
-	background: url("images/sidebar-bg-02.png");
+.aside_divs {
+	background: url("images/sidebar-bg-02.png") repeat-y;
 	padding: 20px 0px 0px;
 }
 #aside_bottom {
@@ -247,21 +236,20 @@ footer h2 {
 
 @media screen and (max-width: 768px) {
 	nav {
-		margin-left: 0px;
+		// margin-left: 0px;
 	}
 	.center {
 		flex-direction: column;
 	}
 	section{
-		width: 630px;
-		margin: auto;
+		width: 96%;
+		margin: 0px auto 40px;
 	}
-	aside {
-		margin: auto;
-		// width: 50vw;
+	#aside_top, #aside_bottom {
+		display: none;
 	}
-	nav li a {
-		font: 22px 'Arvo';
+	#aside_center {
+		display: flex;
 	}
 }
 

@@ -3,11 +3,6 @@ body {
   min-width: 1000px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 #nav_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,7 +15,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100vw;
+  width: 100%;
   max-width: 1000px;
   margin: auto;
 }
@@ -34,7 +29,7 @@ nav > a {
   height: 110px;
   background: url("images/logo-bg.png");
   text-align: center;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 110px;
 }
 
@@ -44,20 +39,16 @@ nav ul {
   display: flex;
   margin: auto;
   list-style-type: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: calc(100vw - 221px);
-  max-width: 500px;
 }
 
 nav li {
-  margin: auto;
+  margin: auto 30px;
 }
 
 nav li a {
   display: block;
   letter-spacing: -1px;
-  font: 16px 'Arvo';
+  font: 24px 'Arvo';
   color: white;
   text-decoration: none;
   /* border: 1px solid yellow; */
@@ -65,7 +56,6 @@ nav li a {
 
 #active {
   padding: 5px 15px;
-  /* width:  */
   border-radius: 5px;
   background-color: #881111;
   -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
@@ -73,8 +63,6 @@ nav li a {
 }
 
 header {
-  /* display: flex; */
-  /* height: 340px; */
   background: url("images/banner-wrapper-bg.png");
   padding: 32px 0px;
 }
@@ -145,11 +133,12 @@ h1 {
 
 #main_a {
   display: block;
-  width: 570px;
   height: 196px;
   background: url("images/pics01.jpg");
+  background-size: cover;
   border-radius: 5px;
   margin: 25px 0px;
+  cursor: pointer;
 }
 
 #posted_div {
@@ -160,6 +149,7 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   /* border: 1px solid black; */
+  width: 570px;
   padding: 0px 20px;
   font: 16px "Arvo";
   line-height: 67px;
@@ -192,8 +182,8 @@ aside {
   background: url("images/sidebar-bg-01.png");
 }
 
-#aside_center {
-  background: url("images/sidebar-bg-02.png");
+.aside_divs {
+  background: url("images/sidebar-bg-02.png") repeat-y;
   padding: 20px 0px 0px;
 }
 
@@ -274,9 +264,6 @@ footer h2 {
 }
 
 @media screen and (max-width: 768px) {
-  nav {
-    margin-left: 0px;
-  }
   .center, .center2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -284,14 +271,16 @@ footer h2 {
             flex-direction: column;
   }
   section {
-    width: 630px;
-    margin: auto;
+    width: 96%;
+    margin: 0px auto 40px;
   }
-  aside {
-    margin: auto;
+  #aside_top, #aside_bottom {
+    display: none;
   }
-  nav li a {
-    font: 22px 'Arvo';
+  #aside_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
